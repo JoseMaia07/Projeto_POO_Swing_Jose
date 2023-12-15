@@ -21,6 +21,8 @@ public class VerificacaoDoisFatores extends javax.swing.JFrame {
     public VerificacaoDoisFatores() {
         initComponents();
         centreWindow(this);
+        this.setTitle("Weathervane");
+        setIconImage();
     }
 
     /**
@@ -45,9 +47,9 @@ public class VerificacaoDoisFatores extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(null);
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Avançar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +134,10 @@ public class VerificacaoDoisFatores extends javax.swing.JFrame {
         int y = (int) ((dimension.getHeight() - frame.getHeight()) / 2);
         frame.setLocation(x, y);
     }
-
+    
+    private void setIconImage() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Assets/perereca_engracada.png")));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField codeInput;
     private javax.swing.JButton jButton1;

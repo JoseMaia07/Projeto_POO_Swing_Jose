@@ -32,6 +32,8 @@ public class EsqueceuSenha extends javax.swing.JFrame {
     public EsqueceuSenha() {
         initComponents();
         centreWindow(this);
+        this.setTitle("Weathervane");
+        setIconImage();
     }
 
     /**
@@ -74,8 +76,8 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         jPanel1.add(username);
         username.setBounds(25, 151, 210, 22);
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Avançar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,8 +87,8 @@ public class EsqueceuSenha extends javax.swing.JFrame {
         jPanel1.add(jButton1);
         jButton1.setBounds(30, 220, 73, 23);
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Voltar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,7 +218,9 @@ public class EsqueceuSenha extends javax.swing.JFrame {
 
     }
 
-
+    private void setIconImage() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Assets/perereca_engracada.png")));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField email;
     private javax.swing.JButton jButton1;

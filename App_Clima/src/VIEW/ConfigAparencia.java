@@ -22,6 +22,8 @@ public class ConfigAparencia extends javax.swing.JFrame {
      */
     public ConfigAparencia() {
         initComponents();
+        this.setTitle("Weathervane");
+        setIconImage();
         restorePreferences();
         updateUI();
         Color color = new Color(214, 217, 223);
@@ -72,7 +74,7 @@ public class ConfigAparencia extends javax.swing.JFrame {
             }
         });
         painelPrincipal.add(selecaoCores);
-        selecaoCores.setBounds(28, 65, 72, 22);
+        selecaoCores.setBounds(28, 65, 80, 22);
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -244,6 +246,10 @@ public class ConfigAparencia extends javax.swing.JFrame {
         int x = (int) ((dimension.getWidth() - frame.getWidth()) / 2);
         int y = (int) ((dimension.getHeight() - frame.getHeight()) / 2);
         frame.setLocation(x, y);
+    }
+    
+    private void setIconImage() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/Assets/perereca_engracada.png")));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> jComboBox1;
